@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useful Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<div class="app">
+
+    <header>
+        <div class="logo-left">Useful</div>
+        <div class="logo-right">Tools</div>
+    </header>
+
+    <div class="top-buttons">
+        <button onclick="showFavorites()">⭐</button>
+        <button onclick="showSettings()">⚙️</button>
+    </div>
+
+    <main>
+
+        <section>
+            <h2>All Tools</h2>
+
+            <div class="tools">
+
+                <button class="tool" onclick="openTool('calculator')">
+                    <span>🧮</span>
+                    <b>Calculator</b>
+                </button>
+
+                <button class="tool" onclick="openTool('converter')">
+                    <span>🔄</span>
+                    <b>Converter</b>
+                </button>
+
+                <button class="tool" onclick="openTool('percentage')">
+                    <span>％</span>
+                    <b>Percentage</b>
+                </button>
+
+                <button class="tool" onclick="openTool('timer')">
+                    <span>⏱️</span>
+                    <b>Timer & Stopwatch</b>
+                </button>
+
+                <button class="tool" onclick="openTool('clock')">
+                    <span>🕐</span>
+                    <b>Local Time</b>
+                </button>
+
+                <button class="tool" onclick="openTool('calendar')">
+                    <span>📅</span>
+                    <b>Calendar</b>
+                </button>
+
+                <button class="tool" onclick="openTool('qr')">
+                    <span>📷</span>
+                    <b>QR Scanner</b>
+                </button>
+
+                <button class="tool" onclick="openTool('weather')">
+                    <span>🌤️</span>
+                    <b>Weather</b>
+                </button>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Mathematics</h2>
+
+            <div class="tools">
+
+                <button class="tool" onclick="openTool('calculator')">
+                    <span>🧮</span>
+                    <b>Calculator</b>
+                </button>
+
+                <button class="tool" onclick="openTool('converter')">
+                    <span>🔄</span>
+                    <b>Converter</b>
+                </button>
+
+                <button class="tool" onclick="openTool('percentage')">
+                    <span>％</span>
+                    <b>Percentage</b>
+                </button>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Time</h2>
+
+            <div class="tools">
+
+                <button class="tool" onclick="openTool('timer')">
+                    <span>⏱️</span>
+                    <b>Timer & Stopwatch</b>
+                </button>
+
+                <button class="tool" onclick="openTool('clock')">
+                    <span>🕐</span>
+                    <b>Local Time</b>
+                </button>
+
+                <button class="tool" onclick="openTool('calendar')">
+                    <span>📅</span>
+                    <b>Calendar</b>
+                </button>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Other</h2>
+
+            <div class="tools">
+
+                <button class="tool" onclick="openTool('qr')">
+                    <span>📷</span>
+                    <b>QR Scanner</b>
+                </button>
+
+                <button class="tool" onclick="openTool('weather')">
+                    <span>🌤️</span>
+                    <b>Weather</b>
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+
+<!-- TOOL PAGE -->
+
+<div id="toolPage" class="page">
+
+    <div class="page-header">
+
+        <button onclick="closePage()">←</button>
+
+        <h2 id="pageTitle">Tool</h2>
+
+        <button id="favoriteButton" onclick="favoriteTool()">☆</button>
+
+    </div>
+
+    <div id="content"></div>
+
+</div>
+
+
+<!-- SETTINGS -->
+
+<div id="settingsPage" class="page">
+
+    <div class="page-header">
+
+        <button onclick="closeSettings()">←</button>
+
+        <h2>Settings</h2>
+
+        <div></div>
+
+    </div>
+
+    <div class="settings-box">
+
+        <h3>Theme Color</h3>
+
+        <p>Choose your favorite color.</p>
+
+        <input
+            id="colorPicker"
+            type="color"
+            value="#6c63ff"
+            onchange="changeColor(this.value)"
+        >
+
+    </div>
+
+    <div class="settings-box">
+
+        <h3>Appearance</h3>
+
+        <button class="mode-button" onclick="darkMode()">
+            🌙 Dark
+        </button>
+
+        <button class="mode-button" onclick="lightMode()">
+            ☀️ Light
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- FAVORITES -->
+
+<div id="favoritesPage" class="page">
+
+    <div class="page-header">
+
+        <button onclick="closeFavorites()">←</button>
+
+        <h2>Favorites</h2>
+
+        <div></div>
+
+    </div>
+
+    <div id="favorites"></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
